@@ -1,0 +1,25 @@
+{
+    "name": "torquehashing",
+    "version": "3.0.5",
+    "main": "torquehashing",
+    "author": {
+        "name": "Multiple",
+        "email": "Check The Git Repo"
+    },
+    "license": "GPL-3.0-or-later",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MoneroOcean/node-cryptonight-hashing.git"
+    },
+    "dependencies": {
+        "bindings": "*",
+        "nan": "^2.8.0"
+    },
+    "keywords": [
+        "cryptonight",
+        "cryptonote",
+        "forknote",
+        "torquecoin",
+        "yespower"
+    ]
+}
