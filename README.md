@@ -10,12 +10,13 @@ Algorithms
 * cryptonight-light (v0, v1)
 * cryptonight-heavy (v0, xhv, tube)
 * cryptonight-pico (trtl)
-* RandomX (Wownero)
+* DefyX (XLA)
 
 Installing locally and testing
 -----
+
 ```
-npm install https://github.com/MoneroOcean/node-cryptonight-hashing
+npm install https://github.com/scala-network/scala-hashing/
 node_modules/cryptonight-hashing/tests/run.sh
 ```
 
