@@ -1,5 +1,5 @@
 "use strict";
-let multiHashing = require('../build/Release/torquehashing');
+let multiHashing = require('../build/Release/cryptonight-hashing');
 
 const ITER = 200;
 let input = Buffer.from("test");
