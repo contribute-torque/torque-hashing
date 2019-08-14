@@ -1,1 +1,1 @@
-module.exports = require('bindings')('torquehashing.node')
+module.exports = require('bindings')('cryptonight-hashing.node')
