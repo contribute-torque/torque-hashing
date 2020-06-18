@@ -1,0 +1,4 @@
+[submodule "panthera"]
+	path = panthera
+	url = https://github.com/scala-network/DefyX
+	branch = Panthera_DP
