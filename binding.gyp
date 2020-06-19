@@ -23,7 +23,7 @@
                 "xmrig/common/crypto/keccak.cpp",
 		
                 "panthera/src/blake2/sha256.c",
-		        "panthera/src/blake2/yescrypt-opt.c",
+		"panthera/src/blake2/yespower-opt.c",
                 "panthera/src/aes_hash.cpp",
                 "panthera/src/argon2_ref.c",
                 "panthera/src/dataset.cpp",
