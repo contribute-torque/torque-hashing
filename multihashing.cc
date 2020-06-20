@@ -87,10 +87,14 @@ using namespace Nan;
 NAN_METHOD(randomx) {
     if (info.Length() < 2) return THROW_ERROR_EXCEPTION("You must provide two arguments.");
 
-    Local<Object> target = info[0]->ToObject();
+    // Local<Object> target = info[0]->ToObject();
+    Local<Object> target = Nan::To<v8::Object>(info[0]).ToLocalChecked();
+
     if (!Buffer::HasInstance(target)) return THROW_ERROR_EXCEPTION("Argument 1 should be a buffer object.");
 
-    Local<Object> seed_hash = info[1]->ToObject();
+    // Local<Object> seed_hash = info[1]->ToObject();
+    Local<Object> seed_hash = Nan::To<v8::Object>(info[1]).ToLocalChecked();
+
     if (!Buffer::HasInstance(seed_hash)) return THROW_ERROR_EXCEPTION("Argument 2 should be a buffer object.");
     if (Buffer::Length(seed_hash) != sizeof(rx_seed_hash)) return THROW_ERROR_EXCEPTION("Argument 2 size should be 32 bytes.");
 
@@ -106,7 +110,9 @@ NAN_METHOD(randomx) {
 NAN_METHOD(cryptonight) {
     if (info.Length() < 1) return THROW_ERROR_EXCEPTION("You must provide one argument.");
 
-    Local<Object> target = info[0]->ToObject();
+//    Local<Object> target = info[0]->ToObject();
+    Local<Object> target = Nan::To<v8::Object>(info[0]).ToLocalChecked();
+
     if (!Buffer::HasInstance(target)) return THROW_ERROR_EXCEPTION("Argument 1 should be a buffer object.");
 
     int variant = 0;
@@ -241,7 +247,9 @@ NAN_METHOD(cryptonight) {
 NAN_METHOD(cryptonight_light) {
     if (info.Length() < 1) return THROW_ERROR_EXCEPTION("You must provide one argument.");
 
-    Local<Object> target = info[0]->ToObject();
+    // Local<Object> target = info[0]->ToObject();
+    Local<Object> target = Nan::To<v8::Object>(info[0]).ToLocalChecked();
+
     if (!Buffer::HasInstance(target)) return THROW_ERROR_EXCEPTION("Argument 1 should be a buffer object.");
 
     int variant = 0;
@@ -274,7 +282,9 @@ NAN_METHOD(cryptonight_light) {
 NAN_METHOD(cryptonight_heavy) {
     if (info.Length() < 1) return THROW_ERROR_EXCEPTION("You must provide one argument.");
 
-    Local<Object> target = info[0]->ToObject();
+    // Local<Object> target = info[0]->ToObject();
+    Local<Object> target = Nan::To<v8::Object>(info[0]).ToLocalChecked();
+
     if (!Buffer::HasInstance(target)) return THROW_ERROR_EXCEPTION("Argument 1 should be a buffer object.");
 
     int variant = 0;
@@ -309,7 +319,9 @@ NAN_METHOD(cryptonight_heavy) {
 NAN_METHOD(cryptonight_pico) {
     if (info.Length() < 1) return THROW_ERROR_EXCEPTION("You must provide one argument.");
 
-    Local<Object> target = info[0]->ToObject();
+    // Local<Object> target = info[0]->ToObject();
+    Local<Object> target = Nan::To<v8::Object>(info[0]).ToLocalChecked();
+
     if (!Buffer::HasInstance(target)) return THROW_ERROR_EXCEPTION("Argument 1 should be a buffer object.");
 
     int variant = 0;
@@ -482,7 +494,8 @@ class CCryptonightAsync : public Nan::AsyncWorker {
 NAN_METHOD(cryptonight_async) {
     if (info.Length() < 2) return THROW_ERROR_EXCEPTION("You must provide at least two arguments.");
 
-    Local<Object> target = info[0]->ToObject();
+    // Local<Object> target = info[0]->ToObject();
+    Local<Object> target = Nan::To<v8::Object>(info[0]).ToLocalChecked();
     if (!Buffer::HasInstance(target)) return THROW_ERROR_EXCEPTION("Argument should be a buffer object.");
 
     int variant = 0;
@@ -556,7 +569,9 @@ class CCryptonightLightAsync : public Nan::AsyncWorker {
 NAN_METHOD(cryptonight_light_async) {
     if (info.Length() < 2) return THROW_ERROR_EXCEPTION("You must provide at least two arguments.");
 
-    Local<Object> target = info[0]->ToObject();
+    // Local<Object> target = info[0]->ToObject();
+    Local<Object> target = Nan::To<v8::Object>(info[0]).ToLocalChecked();
+
     if (!Buffer::HasInstance(target)) return THROW_ERROR_EXCEPTION("Argument should be a buffer object.");
 
     int variant = 0;
@@ -628,7 +643,9 @@ class CCryptonightHeavyAsync : public Nan::AsyncWorker {
 NAN_METHOD(cryptonight_heavy_async) {
     if (info.Length() < 2) return THROW_ERROR_EXCEPTION("You must provide at least two arguments.");
 
-    Local<Object> target = info[0]->ToObject();
+    // Local<Object> target = info[0]->ToObject();
+    Local<Object> target = Nan::To<v8::Object>(info[0]).ToLocalChecked();
+
     if (!Buffer::HasInstance(target)) return THROW_ERROR_EXCEPTION("Argument should be a buffer object.");
 
     int variant = 0;
@@ -714,7 +731,9 @@ class CCryptonightPicoAsync : public Nan::AsyncWorker {
 NAN_METHOD(cryptonight_pico_async) {
     if (info.Length() < 2) return THROW_ERROR_EXCEPTION("You must provide at least two arguments.");
 
-    Local<Object> target = info[0]->ToObject();
+    // Local<Object> target = info[0]->ToObject();
+    Local<Object> target = Nan::To<v8::Object>(info[0]).ToLocalChecked();
+
     if (!Buffer::HasInstance(target)) return THROW_ERROR_EXCEPTION("Argument should be a buffer object.");
 
     int variant = 0;

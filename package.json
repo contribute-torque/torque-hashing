@@ -9,17 +9,22 @@
     "license": "GPL-3.0-or-later",
     "repository": {
         "type": "git",
-        "url": "https://github.com/MoneroOcean/node-cryptonight-hashing.git"
+        "url": "https://github.com/scala-network/scala-hashing.git"
     },
     "dependencies": {
         "bindings": "*",
-        "nan": "^2.8.0"
+        "nan": "^2.13.2"
     },
     "keywords": [
         "cryptonight",
         "cryptonote",
         "forknote",
         "bytecoin",
-        "monero"
-    ]
+        "monero",
+        "scala",
+        "defyx"
+    ],
+    "engines": {
+        "node": ">=14.0.0"
+    }
 }
